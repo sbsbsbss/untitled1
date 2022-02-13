@@ -1,0 +1,17 @@
+
+from HTMLTestRunner import HTMLTestRunner
+
+flname = 'test_report.html'
+f = open(flname,'wb')
+runner = HTMLTestRunner(f,title='测试报告',description='v1.0')
+runner.run(suite)
+f.close()
+
+# 关键字:with
+with open(flname,'wb') as f:
+    runner = HTMLTestRunner(f,title='测试报告',description='v1.0')
+    runner.run(suite)
+
+
+
+
